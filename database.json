@@ -1,0 +1,23 @@
+[
+    {
+        "season": "winter",
+        "items": []
+    },
+    {
+        "season": "summer",
+        "items": [
+            {
+                "name": "summer seeds",
+                "price": "4"
+            }
+        ]
+    },
+    {
+        "season": "spring",
+        "items": []
+    },
+    {
+        "season": "fall",
+        "items": []
+    }
+]
