@@ -1,14 +1,13 @@
 {% extends "base.html" %} {% block title %} Home Page {% endblock %}
 {% block content %}
-<p>This is the shop</p>
+<h1>Shop</h1>
 
 {% for item in shop_items %}
 	<div class="w3-container">
-		<ol>{{ item.season }}</ol>
+		<ol><h3>{{ item.season }}</h3></ol>
 		{% for i in item.items %}
 			
-			<li>Name: {{ i.name }}</li>
-			<li>Price: ${{ i.price }}</li>
+			<li>{{ i.name }}, ${{ i.price }}</li>
 		
 		{% endfor %}
 	</div>
