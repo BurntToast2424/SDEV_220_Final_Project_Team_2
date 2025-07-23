@@ -1,17 +1,20 @@
 {% extends "base.html" %} {% block title %} Home Page {% endblock %}
 {% block content %}
-<h1>Shop</h1>
+<p>This is the shop</p>
 
-{% for item in shop_items %}
+{% for item in items %}
 	<div class="w3-container">
-		<ol><h3>{{ item.season }}</h3></ol>
-		{% for i in item.items %}
+		<h1> {{ item.listing_name }} </h1>
+		<p> ${{ item.price }} </p>
+		<p> {{ item.created_on }} </p>
 			
-			<li>{{ i.name }}, ${{ i.price }}</li>
-		
-		{% endfor %}
-	</div>
+		<form method="post" action="{% url 'add_to_cart' item.id %}">
+			{% csrf_token %}
 
+			<button type="submit" class="cart btn">Add to cart</button>
+		</form>
+			
+	</div>
 {% endfor %}
 
 {% endblock %}

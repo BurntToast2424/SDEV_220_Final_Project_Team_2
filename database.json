@@ -1,54 +1,23 @@
 [
     {
-        "season": "Winter",
+        "season": "winter",
+        "items": []
+    },
+    {
+        "season": "summer",
         "items": [
             {
-                "name": "Winter seeds",
+                "name": "summer seeds",
                 "price": "4"
             }
         ]
     },
     {
-        "season": "Summer",
-        "items": [
-            {
-                "name": "Summer seeds",
-                "price": "4"
-            },
-            {
-                "name": "Watermelon seeds",
-                "price": "4"
-            }
-        ]
+        "season": "spring",
+        "items": []
     },
     {
-        "season": "Spring",
-        "items": [
-            {
-                "name": "Spring seeds",
-                "price": "4"
-            },
-            {
-                "name": "Strawberry seeds",
-                "price": "5"
-            }
-        ]
-    },
-    {
-        "season": "Fall",
-        "items": [
-            {
-                "name": "Fall seeds",
-                "price": "4"
-            },
-            {
-                "name": "Pumpkin seeds",
-                "price": "5"
-            },
-            {
-                "name": "Corn seeds",
-                "price": "4"
-            }
-        ]
+        "season": "fall",
+        "items": []
     }
 ]

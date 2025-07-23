@@ -11,7 +11,7 @@
     </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&subset=latin    ,latin-ext">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -27,12 +27,24 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-	  <li class="nav-item">
-	    <a class="nav-link small" href="#">Login</a>
-	  <li class="nav-item">
-	    <a class="nav-link small" href="#">Register</a>
+	  </li>
+	  {% if user.is_authenticated %}
+	    <li class="nav-item">
+	    <a class="nav-link small" href="{% url 'profile' %}">Profile</a>
+	    </li>
+	    <li class="nav-item">
+	    <a class="nav-link small" href="{% url 'cart_details' %}">My items</a>
           </li>
-        </ul>
+	  {% else %}
+	    <li class="nav-item">
+	    <a class="nav-link small" href="{% url 'login' %}">Login</a>
+	    </li>
+	    <li class="nav-item">
+	    <a class="nav-link small" href="{% url 'register' %}">Register</a>
+	    </li>
+	  {% endif %}
+
+         </ul>
       </div>
     </nav>
     <div class="container">{% block content %} {% endblock %}</div>
