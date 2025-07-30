@@ -6,6 +6,7 @@
     <p> ${{ item.price }} </p>
     <p> {{ item.created_on }} </p>
     <p> Season: {{ item.season }}</p>	
+    <p> Description: {{ item.listing_description }} </p>
     <form method="post" action="{% url 'add_to_cart' item.id %}">
         {% csrf_token %}
 
