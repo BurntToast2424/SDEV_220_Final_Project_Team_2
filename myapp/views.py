@@ -62,3 +62,7 @@ def about(request) -> render:
 
 def contact(request) -> render:
 	return render(request, 'contact.html')
+
+def item_detail(request, pk):
+	item = get_object_or_404(Add_Item, pk=pk)
+	return render(request, 'item_detail.html', {'item': item})
