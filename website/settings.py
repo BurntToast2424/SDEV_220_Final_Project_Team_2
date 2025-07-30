@@ -51,6 +51,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'website.urls'
+LOGOUT_REDIRECT_URL = '/'
+
 
 TEMPLATES = [
     {
