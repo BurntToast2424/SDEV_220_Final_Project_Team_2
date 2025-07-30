@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %} Home Page {% endblock %}
+{% block content %}
+
+<div class="w3-container">
+    <h1> {{ item.listing_name }} </h1>
+    <p> ${{ item.price }} </p>
+    <p> {{ item.created_on }} </p>
+    <p> Season: {{ item.season }}</p>	
+    <form method="post" action="{% url 'add_to_cart' item.id %}">
+        {% csrf_token %}
+
+        <button type="submit" class="cart btn">Add to cart</button>
+    </form>
+        
+</div>
+
+{% endblock %}

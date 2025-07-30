@@ -4,7 +4,7 @@
 
 {% for item in items %}
 	<div class="w3-container">
-		<h1> {{ item.listing_name }} </h1>
+		<h1><a href="{% url 'item_detail' pk=item.pk %}"> {{ item.listing_name }} </a></h1>
 		<p> ${{ item.price }} </p>
 		<p> {{ item.created_on }} </p>
 		<p> Season: {{ item.season }}</p>	
