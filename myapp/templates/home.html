@@ -1,10 +1,10 @@
 {% extends "base.html" %} {% block title %} Home Page {% endblock %}
 {% block content %}
-<p>This is the shop</p>
+<h1>Shop</h1>
 
 {% for item in items %}
 	<div class="w3-container">
-		<h1><a href="{% url 'item_detail' pk=item.pk %}"> {{ item.listing_name }} </a></h1>
+		<h2><a href="{% url 'item_detail' pk=item.pk %}"> {{ item.listing_name }} </a></h2>
 		<p> ${{ item.price }} </p>
 		<p> {{ item.created_on }} </p>
 		<p> Season: {{ item.season }}</p>	
